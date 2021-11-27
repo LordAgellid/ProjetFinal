@@ -33,37 +33,31 @@ app.post("/connexion", async (req, rep) =>{
             password: req.body.password
         }
 
-        for (let i = 0; i < table.length; i++) {
-            valide = 0;
-            admin = table[0];
+        valide = 0;
+        admin = table[0];
 
-            if(info.id === admin.nom_utisateur && info.password === admin.mot_de_passe){
-                valide += 1
-                
-                if(!admin.compte_bloque){
-                    valide += 1;
-                    break;
-                }
+        if(info.id === admin.nom_utisateur && info.password === admin.mot_de_passe){
+            valide += 1
+            
+            if(!admin.compte_bloque){
+                valide += 1;
+                rep.status(200).json({success: true})
+
+            }else{
+                rep.status(200).json({
+                    success: false,
+                    compteBloque: true,
+                    erreur: "Compte Bloque"
+                })
             }
-        }
-
-        if (valide === 0) {
+            
+        }else{
             rep.status(200).json({
                 success: false,
                 compteBloque: false,
-                erreur: "Mot de passe ou nom d'utilisateur invalide "
+                erreur: "Mot de passe ou nom d'utilisateur invalide"
             })
-        } else if(valide === 1){
-            rep.status(200).json({
-                success: false,
-                compteBloque: true,
-                erreur: "Compte Bloque"
-            })
-        }else{
-            rep.status(200).json({success: true})
         }
-
-        
         
     }catch(error){
         rep.status(500).json({

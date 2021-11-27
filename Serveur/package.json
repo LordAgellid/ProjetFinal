@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bulma": "^0.9.3",
     "cors": "^2.8.5",
     "eslint": "^8.3.0",
     "express": "^4.17.1",

@@ -10,7 +10,7 @@
 
 ### Répartition des tâches
     FrontEnd
-        - À mettre à jour
+        - Yao
         
     BackEnd
-        - À mettre à jour
+        - Makhlouf

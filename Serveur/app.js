@@ -74,4 +74,4 @@ app.post("/connexion", async (req, rep) =>{
 
 
 
-app.listen(PORT, ()=> console.log("Le serveur ecoute au port " + PORT))
+app.listen(PORT, ()=> console.log("L'application serveur roule sur le port " + PORT))

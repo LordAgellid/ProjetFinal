@@ -1,3 +1,4 @@
+@import url("font-awesome/css/fontawesome-all.min.css");
 @import url('http://fonts.cdnfonts.com/css/monument-extended');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -49,13 +50,13 @@ header {
 }
 
 .logo {
-    width: 100px;
+    height: 15px;
     margin-right: auto;
     transition: all 0.15s ease 0s ;
 }
 
 .logo:hover {
-    width: 115px;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -159,7 +160,6 @@ button:hover {
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section {
-    background-color: red;
     height: 100vh;
 }
 
@@ -172,21 +172,10 @@ button:hover {
 
 /*---------------------------------------------  ---------------------------------------------*/
 
-.col-3 img {
-    width: 400px;
-    transition: all 0.15s ease 0s;
+.showcase-section .size {
+    width: 100px;
 }
 
-.product-info {
-    display: flex;
-    align-items: center;
-}
-
-.product-info-1 {
-    padding: 0px 10px;
-    display: inline-flex;
-}
-
-.product-info-1 p {
-    font-family: var(--font1);
+.checked {
+    color: orange;
 }

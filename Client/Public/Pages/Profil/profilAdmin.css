@@ -49,9 +49,14 @@ header {
 }
 
 .logo {
-    width: 100px;
-    cursor: pointer;
+    height: 15px;
     margin-right: auto;
+    transition: all 0.15s ease 0s ;
+}
+
+.logo:hover {
+    height: 20px;
+    cursor: pointer;
 }
 
 li, a, button {

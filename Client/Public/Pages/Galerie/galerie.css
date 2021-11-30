@@ -84,6 +84,7 @@ button {
     margin-left: 20px;
     border: none;
     padding: 5px 20px;
+    border-radius: 8px;
     background-color: var(--white);
     transition: all 0.15s ease 0s ;
 }

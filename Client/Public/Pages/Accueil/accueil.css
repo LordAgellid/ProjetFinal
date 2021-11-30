@@ -50,8 +50,13 @@ header {
 
 .logo {
     width: 100px;
-    cursor: pointer;
     margin-right: auto;
+    transition: all 0.15s ease 0s ;
+}
+
+.logo:hover {
+    width: 115px;
+    cursor: pointer;
 }
 
 li, a, button {
@@ -84,6 +89,7 @@ button {
     margin-left: 20px;
     border: none;
     padding: 5px 20px;
+    border-radius: 8px;
     background-color: var(--white);
     transition: all 0.15s ease 0s ;
 }
@@ -148,4 +154,39 @@ button:hover {
     font-family: var(--font1);
     font-weight: 800;
     transition: all 0.15s ease 0s ;
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.showcase-section {
+    background-color: red;
+    height: 100vh;
+}
+
+.showcase-section-title {
+    width: 400px;
+    text-align: center;
+    margin: 0px auto 50px;
+    background-color: var(--white);
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.col-3 img {
+    width: 400px;
+    transition: all 0.15s ease 0s;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info-1 {
+    padding: 0px 10px;
+    display: inline-flex;
+}
+
+.product-info-1 p {
+    font-family: var(--font1);
 }

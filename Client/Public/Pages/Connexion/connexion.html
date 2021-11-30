@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../../../Public/Medias/Branding/INFINITEFavIcon.png" type="image.png">
     <link rel="stylesheet" href="../../../Public/Pages/Connexion/connexion.css">
 
-    <script src="./connexion.js"></script>
+    <script src="../../../Public/Pages/Connexion/connexion.js"></script>
     
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <li><a href="http://localhost:3000/Accueil">Accueil</a></li>
                 <li><a href="http://localhost:3000/Accueil#description">À propos</a></li>
                 <li><a href="#">Produits</a></li>
-                <li><a href="#">Galerie</a></li>
+                <li><a href="http://localhost:3000/Galerie">Galerie</a></li>
             </ul>
         </nav>
         <a href="http://localhost:3000/Connexion" class="cta"><button>Se connecter</button></a>
@@ -31,7 +31,7 @@
         
         <form id="connectToAccountFormulaire" name="form" onsubmit="connexion(event)">
 
-            <h1 id="form-container-Title">Session</h1>
+            <h1 id="form-container-Title">Connexion</h1>
 
             <div class="formSection">
 
@@ -40,10 +40,11 @@
                 
                 <label for="password">Mot de passe</label>
                 <input type="password" placeholder="••••••••••" name="password" id="password" min="6" autocomplete="current-password">
+    
+                <div id="error">
+                    <p id="errorMessage">Nom d'utilisateur ou mot de passe invalide.</p>
+                </div>
                 
-            </div>
-
-            <div id="error">
             </div>
             
             <div id="submitButton">                

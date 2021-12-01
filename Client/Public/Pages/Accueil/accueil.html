@@ -22,7 +22,7 @@
             <ul class="nav_links">
                 <li><a href="http://localhost:3000/Accueil">Accueil</a></li>
                 <li><a href="http://localhost:3000/Accueil#description">À propos</a></li>
-                <li><a href="#">Produits</a></li>
+                <li><a href="http://localhost:3000/Accueil#produits">Produits</a></li>
                 <li><a href="http://localhost:3000/Galerie">Galerie</a></li>
             </ul>
         </nav>
@@ -50,19 +50,27 @@
             <h1>Nos produits</h1>
         </div>
 
-        <div class="product">
-            <img src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST">
-            <div class="product-info">
-                <p>AMETHYST</p>
-                <p>10 <span class="product-info-em">ETH</span></p>
+        <div id="produits" class="showcase-section-products">
+            <div class="product">
+                <img src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST">
+                <div class="product-infos">
+                    <div class="product-info">
+                        <p>AMETHYST</p>
+                        <p id="price">0.000001 <span class="product-info-em">ETH</span></p>
+                    </div>
+    
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
             </div>
         </div>
+    
 
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
     </div>
     
 

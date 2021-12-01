@@ -160,7 +160,10 @@ button:hover {
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section {
+    width: 80%;
     height: 100vh;
+    margin: auto;
+    padding: 50px 0px 0px;
 }
 
 .showcase-section-title {
@@ -170,32 +173,72 @@ button:hover {
     background-color: var(--white);
 }
 
+.showcase-section-products {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section .size {
-    width: 100px;
+    width: 500px;
 }
 
 .product {
     width: 400px;
-    height: 550px;
-    margin: 10px auto 0px;
-    background-color: brown;
+    height: 510px;
+    border-radius: 10px;
+    background-color: var(--darkGray);
+}
+
+.product:hover {
+    position: relative;
+    offset-position: 10px;
 }
 
 .product img {
     width: inherit;
+    border-radius: 10px 10px 0px 0px;
 }
 
-.product .product-info {
-    width: inherit;
-}
-
-
-.product .product-info .product-info-em {
+.product-infos {
+    color: var(--white);
     font-family: var(--font2);
+    width: inherit;
+    font-size: 25px;
+    line-height: 30.5px;
+}
+
+
+.product-infos-em {
+    font-weight: 800;
+}
+
+.product-info {
+    width: inherit;
+    display: inline-flex;
+    padding: 10px 25px 0px;
+}
+
+.product-info #price {
+    margin-left: auto;
+}
+
+.rating {
+    padding: 0px 25px;
+}
+
+.rating span {
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .checked {
     color: orange;
+    transition: all 0.15s ease 0s ;
+}
+
+span:hover{
+    font-size: 25px;
+    cursor: pointer;
 }

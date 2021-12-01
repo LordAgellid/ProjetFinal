@@ -176,6 +176,26 @@ button:hover {
     width: 100px;
 }
 
+.product {
+    width: 400px;
+    height: 550px;
+    margin: 10px auto 0px;
+    background-color: brown;
+}
+
+.product img {
+    width: inherit;
+}
+
+.product .product-info {
+    width: inherit;
+}
+
+
+.product .product-info .product-info-em {
+    font-family: var(--font2);
+}
+
 .checked {
     color: orange;
 }

@@ -20,6 +20,19 @@ app.get("/profil", async (req, rep) =>{
         })
     }
 })
+/*----------------------------------- PRODUITS GET REQUEST -----------------------------------*/
+app.get("/produits", async (req, rep) =>{
+    try {
+        produits = await requete.afficherProduits()
+
+        rep.status(200).json(produits)
+
+    } catch(error) {
+        rep.status(500).json({
+            erreur: error 
+        })
+    }
+})
 
 // connexion
 app.post("/connexion", async (req, rep) =>{

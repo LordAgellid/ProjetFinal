@@ -6,6 +6,8 @@
     --white: #fff;
     --darkGray: #151515;
     --lightGray: #f5f5f5;
+    --green: #3EB650;
+    --red: #E12B38;
     --font1: 'Monument Extended', sans-serif;
     --font2: 'Poppins', sans-serif;
 }
@@ -89,13 +91,14 @@ button {
     padding: 5px 20px;
     border-radius: 8px;
     background-color: var(--white);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
     transition: all 0.15s ease 0s ;
 }
 
 button:hover {
     cursor: pointer;
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--red);
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
@@ -132,4 +135,24 @@ button:hover {
 
 .admin-profile-infos h1 {
     font-family: var(--font1);
+}
+
+.connexion-message {
+    width: max-content;
+    height: max-content;
+    padding: 10px 15px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px ;
+    border-radius: 15px;
+    background-color: var(--green);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.connexion-message p {
+    color: var(--white);
+    font-family: var(--font2);
+    text-align: center;
+    font-size: 15px;
+    margin: 0px auto 0px;
 }

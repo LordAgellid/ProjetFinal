@@ -34,7 +34,7 @@ html {
 
 body {
     font-family: var(--font1);
-    background-color: var(--darkGray);
+    background-color: var(--white);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/
@@ -48,15 +48,13 @@ header {
     background-color: var(--lightGray);
 }
 
-.logo {
-    height: 15px;
+.logo-container {
     margin-right: auto;
-    transition: all 0.15s ease 0s ;
 }
 
-.logo:hover {
-    height: 20px;
-    cursor: pointer;
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
 }
 
 li, a, button {
@@ -101,3 +99,37 @@ button:hover {
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
+
+.admin-profile-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--darkGray);
+}
+
+.admin-profile-section-info {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 7.5%;
+}
+
+.admin-profile-icon {
+    width: 125px;
+}
+
+.admin-profile-icon img {
+    width: inherit;
+}
+
+.admin-profile-infos {
+    color: var(--white);
+    margin-left: 25px;
+    font-family: var(--font2);
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.admin-profile-infos h1 {
+    font-family: var(--font1);
+}

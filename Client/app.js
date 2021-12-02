@@ -22,7 +22,7 @@ app.get("/Connexion", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Connexion/connexion.html"))
 })
 
-app.get("/Profil/", (req, rep) => {
+app.get("/Profil/:id", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Profil/profilAdmin.html"))
 })
 

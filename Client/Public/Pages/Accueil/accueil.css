@@ -49,15 +49,13 @@ header {
     background-color: var(--lightGray);
 }
 
-.logo {
-    height: 15px;
+.logo-container {
     margin-right: auto;
-    transition: all 0.15s ease 0s ;
 }
 
-.logo:hover {
-    height: 20px;
-    cursor: pointer;
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
 }
 
 li, a, button {
@@ -154,7 +152,7 @@ button:hover {
 .description-section-paragraph-emphasis {
     font-family: var(--font1);
     font-weight: 800;
-    transition: all 0.15s ease 0s ;
+    transition: all 0.15s ease 0s;
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
@@ -189,11 +187,16 @@ button:hover {
     height: 510px;
     border-radius: 10px;
     background-color: var(--darkGray);
+    transition: all 0.15s ease 0s;
 }
 
 .product:hover {
-    position: relative;
-    offset-position: 10px;
+    width: 425px;
+    height: 535px;
+}
+
+.product a {
+    width: inherit;
 }
 
 .product img {
@@ -238,7 +241,7 @@ button:hover {
     transition: all 0.15s ease 0s ;
 }
 
-span:hover{
+.rating span:hover{
     font-size: 25px;
     cursor: pointer;
 }

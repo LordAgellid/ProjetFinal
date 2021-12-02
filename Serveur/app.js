@@ -27,6 +27,37 @@ app.get("/Administrateurs", async (req, rep) =>{
     }
 })
 
+/*----------------------------------- PRODUCTS GET REQUEST -----------------------------------*/
+app.get("/Produits", async (req, rep) =>{
+    try {
+        produits = await requete.afficherProduits()
+
+        rep.status(200).json(produits)
+
+    } catch(error) {
+        rep.status(500).json({
+            erreur: error 
+        })
+    }
+})
+
+/*----------------------------------- PROFILE GET REQUEST -----------------------------------*/
+app.get("/Profil/:id", async (req, rep) =>{
+    try {
+
+        admin = await requete.afficherUnAdmin(req.params.id);
+        
+        rep.status(200).json(admin);
+
+        alert(admin);
+
+    } catch(error) {
+        rep.status(500).json({
+            erreur: error 
+        })
+    }
+})
+
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
 app.post("/Connexion", async (req, rep) =>{
@@ -69,7 +100,10 @@ app.post("/Connexion", async (req, rep) =>{
                 erreur: "Compte Bloque"
             })
         } else {
-            rep.status(200).json({success: true})
+            rep.status(200).json({
+                success: true,
+                username: admin.Username
+            })
         }
 
     } catch(error) {
@@ -81,4 +115,4 @@ app.post("/Connexion", async (req, rep) =>{
 
 /*----------------------------------- PORT LISTENER -----------------------------------*/
 
-app.listen(PORT, ()=> console.log("L'application serveur roule sur le port " + PORT + ".\n"))
+app.listen(PORT, () => console.log("L'application serveur roule sur le port " + PORT + ".\n"))

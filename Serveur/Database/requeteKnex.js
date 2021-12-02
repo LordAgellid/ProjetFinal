@@ -13,9 +13,21 @@ const knex = require("knex")({
   function afficherAdmins() {
       return knex("Administrateurs");
   }
+
+  function afficherProduits() {
+      return knex("Produits");
+  }
+
+  function afficherUnAdmin(admin) {
+      return knex("Administrateurs")
+      .select("Nom", "Prenom", "Username", "Courriel")
+      .where({Username: admin});
+  }
   
 /*----------------------------------- EXPORTING FUNCTIONS -----------------------------------*/
 
 module.exports = {
-  afficherAdmins
+  afficherAdmins,
+  afficherProduits,
+  afficherUnAdmin
 };

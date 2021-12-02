@@ -48,15 +48,13 @@ header {
     background-color: var(--lightGray);
 }
 
-.logo {
-    height: 15px;
+.logo-container {
     margin-right: auto;
-    transition: all 0.15s ease 0s ;
 }
 
-.logo:hover {
-    height: 20px;
-    cursor: pointer;
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
 }
 
 li, a, button {
@@ -113,6 +111,7 @@ button:hover {
 .image-gallery img {
     width: 550px;
     transition: all 0.15s ease 0s;
+    border-radius: 10px;
 }
 
 .image-gallery img:hover {

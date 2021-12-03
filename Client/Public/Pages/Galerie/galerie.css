@@ -48,10 +48,13 @@ header {
     background-color: var(--lightGray);
 }
 
-.logo {
-    width: 100px;
-    cursor: pointer;
+.logo-container {
     margin-right: auto;
+}
+
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
 }
 
 li, a, button {
@@ -86,6 +89,7 @@ button {
     padding: 5px 20px;
     border-radius: 8px;
     background-color: var(--white);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
     transition: all 0.15s ease 0s ;
 }
 
@@ -108,6 +112,7 @@ button:hover {
 .image-gallery img {
     width: 550px;
     transition: all 0.15s ease 0s;
+    border-radius: 10px;
 }
 
 .image-gallery img:hover {

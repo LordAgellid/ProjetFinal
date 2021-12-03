@@ -22,10 +22,10 @@ app.get("/Connexion", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Connexion/connexion.html"))
 })
 
-app.get("/Profil/", (req, rep) => {
+app.get("/Profil/:id", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Profil/profilAdmin.html"))
 })
 
 /*----------------------------------- PORT LISTENER -----------------------------------*/
 
-app.listen(PORT, () => console.log("L'application client roule sur le port " + PORT))
+app.listen(PORT, () => console.log("L'application client roule sur le port " + PORT + ".\n"))

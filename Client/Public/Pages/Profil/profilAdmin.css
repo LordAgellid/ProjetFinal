@@ -23,10 +23,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--black);
-}
-
-::-webkit-scrollbar-thumb:hover {
     background-color: var(--white);
 }
 
@@ -36,7 +32,7 @@ html {
 
 body {
     font-family: var(--font1);
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/
@@ -123,6 +119,8 @@ button:hover {
 
 .admin-profile-icon img {
     width: inherit;
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
 
 .admin-profile-infos {
@@ -146,7 +144,7 @@ button:hover {
     bottom: 25px ;
     border-radius: 15px;
     background-color: var(--green);
-    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.15);
 }
 
 .connexion-message p {
@@ -155,4 +153,32 @@ button:hover {
     text-align: center;
     font-size: 15px;
     margin: 0px auto 0px;
+}
+
+.table-section {
+    width: 80%;
+    padding: 100px 0px;
+    margin: 0px auto 0px;
+    color: var(--white);
+    background-color: var(--red);
+    height: max-content;
+}
+
+.table-section-title {
+    width: inherit;
+    margin: inherit;
+    font-size: 25px;
+}
+
+.table {
+    width: 80%;
+    font-family: var(--font2);
+    margin: 35px auto 0px;
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px 15px;
+    border: 1px solid var(--black);
 }

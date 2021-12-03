@@ -16,7 +16,9 @@ function connexion(event) {
     .then(repJson => {
 
         if(repJson.success) {
-            window.location.href = "http://localhost:3000/Profil/" + repJson.username;
+            let url = new URL("http://localhost:3000/Profil/");
+            url.searchParams.set("id", repJson.username);
+            window.location.href = url;
         }
         else {
             error.style.display = "block";

@@ -20,7 +20,7 @@ function load() {
                 productImageContainer.classList.add("product-image-container");
                 products.appendChild(productImageContainer)
 
-                // //         <a href="#"><img class="product-image" src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST"></a>
+                //         <a href="#"><img class="product-image" src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST"></a>
                 let lienProduit = document.createElement('a')
                 lienProduit.href = '#'
                 productImageContainer.appendChild(lienProduit)

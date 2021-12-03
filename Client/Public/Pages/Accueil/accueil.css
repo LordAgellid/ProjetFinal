@@ -1,0 +1,241 @@
+@import url("font-awesome/css/fontawesome-all.min.css");
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --darkGray: #151515;
+    --lightGray: #f5f5f5;
+    --font1: 'Monument Extended', sans-serif;
+    --font2: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--darkGray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--black);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font1);
+    background-color: var(--white);
+}
+
+/*----------------------------------- NAVIGATION BAR -----------------------------------*/
+
+header {
+    height: 75px;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--lightGray);
+}
+
+.logo-container {
+    margin-right: auto;
+}
+
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
+}
+
+li, a, button {
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--font2);
+    text-decoration: none;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    padding: 0px 5px;
+    display: inline-block;
+}
+
+.nav_links li a {
+    transition: all 0.15s ease 0s ;
+}
+
+.nav_links li a:hover {
+    font-family: var(--font1);
+    font-size: 17.5px;
+}
+
+button {
+    margin-left: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+    transition: all 0.15s ease 0s ;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.hero-section {
+    background-color: var(--white);
+}
+
+.hero-section-for-title {
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+    text-align: center;
+}
+
+.hero-section-title {
+    color: var(--black);
+    font-family: var(--font2);
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.hero-section-title-emphasis {
+    font-family: var(--font1);
+    font-weight: 800;
+    transition: all 0.15s ease 0s ;
+}
+
+.description {
+    background-color: var(--darkGray);
+    transition: all 0.15s ease 0s ;
+}
+
+.description:hover {
+    background-color: var(--black);
+}
+
+.description-section {
+    width: 55%;
+    padding-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15vh;
+    text-align: justify;
+}
+
+.description-section-paragraph {
+    color: var(--white);
+    font-family: var(--font2);
+    font-weight: 200;
+    font-size: 35px;
+}
+
+.description-section-paragraph-emphasis {
+    font-family: var(--font1);
+    font-weight: 800;
+    transition: all 0.15s ease 0s;
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.showcase-section {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    padding: 50px 0px 0px;
+}
+
+.showcase-section-title {
+    width: 400px;
+    text-align: center;
+    margin: 0px auto 50px;
+    background-color: var(--white);
+}
+
+.showcase-section-products {
+    width: 1750px;
+    margin: 75px auto 75px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 50px;
+    background-color: violet;
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.showcase-section .size {
+    width: 1750px;
+}
+
+.product {
+    width: 400px;
+    height: 510px;
+    color: var(--white);
+    border-radius: 15px;
+    background-color: var(--darkGray);
+    transition: all 0.15s ease 0s;
+}
+
+.product-image-container, .product-image, a {
+    width: inherit;
+}
+
+.product-image {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.product-infos {
+    font-family: var(--font2);
+    font-size: 25px;
+    display: flex;
+}
+
+.product-infos {
+    width: inherit;
+    display: inline-flex;
+    padding: 10px 25px 0px;
+    justify-content: space-between;
+}
+
+.product-infos .price {
+    margin-left: auto;
+}
+
+.rating {
+    padding: 0px 25px;
+}
+
+.rating span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.checked {
+    color: orange;
+    transition: all 0.15s ease 0s ;
+}
+
+.rating span:hover{
+    font-size: 25px;
+    cursor: pointer;
+}

@@ -1,0 +1,158 @@
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --darkGray: #151515;
+    --lightGray: #f5f5f5;
+    --green: #3EB650;
+    --red: #E12B38;
+    --font1: 'Monument Extended', sans-serif;
+    --font2: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font1);
+    background-color: var(--white);
+}
+
+/*----------------------------------- NAVIGATION BAR -----------------------------------*/
+
+header {
+    height: 75px;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--lightGray);
+}
+
+.logo-container {
+    margin-right: auto;
+}
+
+.logo {
+    height: 15px;
+    transition: all 0.15s ease 0s ;
+}
+
+li, a, button {
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--font2);
+    text-decoration: none;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    padding: 0px 5px;
+    display: inline-block;
+}
+
+.nav_links li a {
+    transition: all 0.15s ease 0s ;
+}
+
+.nav_links li a:hover {
+    font-family: var(--font1);
+    font-size: 17.5px;
+}
+
+button {
+    margin-left: 20px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+    transition: all 0.15s ease 0s ;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--red);
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.admin-profile-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--darkGray);
+}
+
+.admin-profile-section-info {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 7.5%;
+}
+
+.admin-profile-icon {
+    width: 125px;
+}
+
+.admin-profile-icon img {
+    width: inherit;
+}
+
+.admin-profile-infos {
+    color: var(--white);
+    margin-left: 25px;
+    font-family: var(--font2);
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.admin-profile-infos h1 {
+    font-family: var(--font1);
+}
+
+.connexion-message {
+    width: max-content;
+    height: max-content;
+    padding: 10px 15px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px ;
+    border-radius: 15px;
+    background-color: var(--green);
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.connexion-message p {
+    color: var(--white);
+    font-family: var(--font2);
+    text-align: center;
+    font-size: 15px;
+    margin: 0px auto 0px;
+}

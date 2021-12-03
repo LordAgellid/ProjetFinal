@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFINITE SHOP - Se connecter</title>
+
+    <link rel="shortcut icon" href="../../../Public/Medias/Branding/INFINITEFavIcon.png" type="image.png">
+    <link rel="stylesheet" href="../../../Public/Pages/Connexion/connexion.css">
+
+    <script src="../../../Public/Pages/Connexion/connexion.js"></script>
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="http://localhost:3000/Accueil"><img src="../../../Public/Medias/Branding/INFINITELogo.png" alt="INFINITE Logo" class="logo"></a>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="http://localhost:3000/Accueil">Accueil</a></li>
+                <li><a href="http://localhost:3000/Accueil#description">À propos</a></li>
+                <li><a href="http://localhost:3000/Accueil#produits">Produits</a></li>
+                <li><a href="http://localhost:3000/Galerie">Galerie</a></li>
+            </ul>
+        </nav>
+        <a href="http://localhost:3000/Connexion" class="cta"><button>Se connecter</button></a>
+    </header>
+
+    <div class="form-container">
+        
+        <form id="connectToAccountFormulaire" name="form" onsubmit="connexion(event)">
+
+            <h1 id="form-container-Title">Connexion</h1>
+
+            <div class="formSection">
+
+                <label for="id">Identifiant</label>
+                <input type="text" placeholder="Entrez votre identifiant" name="id" id="id" autocomplete="email, username">
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" autocomplete="current-password">
+    
+                <div id="error">
+                    <p id="errorMessage">Nom d'utilisateur ou mot de passe invalide.</p>
+                </div>
+                
+            </div>
+            
+            <div id="submitButton">                
+                <input type="submit" value="Se connecter &#x203A;">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

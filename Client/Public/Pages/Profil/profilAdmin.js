@@ -2,9 +2,11 @@ window.onload = load;
 
 function load() {
 
-    let donneeFormulaire = new URLSearchParams(new FormData());
+    let url = new URL("http://localhost:5000/Profils");
+    // url.searchParams.set("x", value);
 
-    fetch("http://localhost:5000/Connexion", {
+
+    fetch( url, {
         method: "GET",
         body: donneeFormulaire
     })

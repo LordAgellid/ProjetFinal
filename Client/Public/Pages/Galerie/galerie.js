@@ -3,7 +3,7 @@ window.onload = load;
 function load() {
 
     fetch("http://localhost:5000/Produits")
-    .then(rep =>{
+    .then(rep => {
         return rep.json();
     })
     .then(produits => {

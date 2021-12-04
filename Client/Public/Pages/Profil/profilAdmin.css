@@ -160,7 +160,7 @@ button:hover {
     padding: 100px 0px;
     margin: 0px auto 0px;
     color: var(--white);
-    background-color: var(--red);
+    /* background-color: var(--red); */
     height: max-content;
 }
 
@@ -175,10 +175,18 @@ button:hover {
     font-family: var(--font2);
     margin: 35px auto 0px;
     border-collapse: collapse;
+    background-color: var(--darkGray);
 }
 
 td, th {
     text-align: left;
     padding: 10px 15px;
-    border: 1px solid var(--black);
+    border: 1px solid var(--white);
+}
+
+.product-image {
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.15s ease-in-out 0s;
 }

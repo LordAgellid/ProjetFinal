@@ -18,6 +18,10 @@ app.get("/Galerie", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Galerie/galerie.html"))
 })
 
+app.get("/Details-produit", (req, rep) => {
+    rep.sendFile(path.join(__dirname, "Public/Pages/detailProduit/detailProduit.html"))
+})
+
 app.get("/Connexion", (req, rep) => {
     rep.sendFile(path.join(__dirname, "Public/Pages/Connexion/connexion.html"))
 })

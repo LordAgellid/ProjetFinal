@@ -22,11 +22,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--darkGray);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 body {
@@ -138,7 +134,6 @@ input[type=text], [type=password] {
     text-align: center;
     margin: 5px auto 0px;
     display: none;
-    transition: .25s ease;
 }
 
 #error p {

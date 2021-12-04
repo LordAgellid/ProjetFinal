@@ -45,11 +45,8 @@ app.get("/Produits", async (req, rep) =>{
 app.get("/Profil/:id", async (req, rep) =>{
     try {
 
-        admin = await requete.afficherUnAdmin(req.params.id);
-        
+        admin = await requete.afficherUnAdmin(req.params.id);        
         rep.status(200).json(admin);
-
-        alert(admin);
 
     } catch(error) {
         rep.status(500).json({

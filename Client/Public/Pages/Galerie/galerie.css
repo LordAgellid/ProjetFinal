@@ -16,15 +16,12 @@
     box-sizing: border-box;
 }
 
+
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--black);
-}
-
-::-webkit-scrollbar-thumb:hover {
     background-color: var(--white);
 }
 

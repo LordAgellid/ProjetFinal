@@ -55,6 +55,20 @@ app.get("/Profil/:id", async (req, rep) =>{
     }
 })
 
+/*----------------------------------- PRODUCT GET REQUEST -----------------------------------*/
+app.get("/Produit/:id", async (req, rep) =>{
+    try {
+        produit = await requete.afficherUnProduit(req.params.id)
+
+        rep.status(200).json(produit)
+
+    } catch(error) {
+        rep.status(500).json({
+            erreur: error 
+        })
+    }
+})
+
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
 app.post("/Connexion", async (req, rep) =>{

@@ -5,6 +5,7 @@
     --black: #000;
     --white: #fff;
     --darkGray: #151515;
+    --mediumGray: #1f1f1f;
     --lightGray: #f5f5f5;
     --font1: 'Monument Extended', sans-serif;
     --font2: 'Poppins', sans-serif;
@@ -31,7 +32,7 @@ html {
 
 body {
     font-family: var(--font1);
-    background-color: var(--darkGray);
+    background-color: var(--mediumGray);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/

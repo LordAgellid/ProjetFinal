@@ -1,82 +1,82 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
+const express = require("express")
+const app = express()
+const cors = require("cors")
 const requete = require("../Serveur/Database/requeteKnex")
 
-const PORT = process.env.PORT || 5000 ;
+const PORT = process.env.PORT || 5000;
 
 /*----------------------------------- READING/LISTENING PORTS -----------------------------------*/
 
-app.use(cors());
+app.use(cors())
 
 app.set('json spaces', 2)
 
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 /*----------------------------------- PROFILES GET REQUEST -----------------------------------*/
-app.get("/Administrateurs", async (req, rep) =>{
+app.get("/Administrateurs", async (req, rep) => {
     try {
         table = await requete.afficherAdmins()
 
         rep.status(200).json(table)
 
-    } catch(error) {
+    } catch (error) {
         rep.status(500).json({
-            erreur: error 
+            erreur: error
         })
     }
 })
 
 /*----------------------------------- PRODUCTS GET REQUEST -----------------------------------*/
-app.get("/Produits", async (req, rep) =>{
+app.get("/Produits", async (req, rep) => {
     try {
         produits = await requete.afficherProduits()
 
         rep.status(200).json(produits)
 
-    } catch(error) {
+    } catch (error) {
         rep.status(500).json({
-            erreur: error 
+            erreur: error
         })
     }
 })
 
 /*----------------------------------- PROFILE GET REQUEST -----------------------------------*/
-app.get("/Profil/:id", async (req, rep) =>{
+app.get("/Profil/:id", async (req, rep) => {
     try {
 
-        admin = await requete.afficherUnAdmin(req.params.id);        
+        admin = await requete.afficherUnAdmin(req.params.id);
         rep.status(200).json(admin);
 
-    } catch(error) {
+    } catch (error) {
         rep.status(500).json({
-            erreur: error 
+            erreur: error
         })
     }
 })
 
 /*----------------------------------- PRODUCT GET REQUEST -----------------------------------*/
-app.get("/Produit/:id", async (req, rep) =>{
+app.get("/Produit/:id", async (req, rep) => {
     try {
         produit = await requete.afficherUnProduit(req.params.id)
 
         rep.status(200).json(produit)
 
-    } catch(error) {
+    } catch (error) {
         rep.status(500).json({
-            erreur: error 
+            erreur: error
         })
     }
 })
 
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
-app.post("/Connexion", async (req, rep) =>{
-    try{
+app.post("/Connexion", async (req, rep) => {
+    try {
         const table = await requete.afficherAdmins()
-        
+
         let admin, valide;
-        
+
         const info = {
             id: req.body.id,
             password: req.body.password
@@ -88,10 +88,10 @@ app.post("/Connexion", async (req, rep) =>{
             valide = 0;
             admin = table[0];
 
-            if(info.id === admin.Username && info.password === admin.Password) {
+            if (info.id === admin.Username && info.password === admin.Password) {
                 valide += 1
-                
-                if(!admin.CompteBloque){
+
+                if (!admin.CompteBloque) {
                     valide += 1;
                     break;
                 }
@@ -104,7 +104,7 @@ app.post("/Connexion", async (req, rep) =>{
                 compteBloque: false,
                 erreur: "Mot de passe ou nom d'utilisateur invalide "
             })
-        } else if(valide === 1) {
+        } else if (valide === 1) {
             rep.status(200).json({
                 success: false,
                 compteBloque: true,
@@ -117,9 +117,9 @@ app.post("/Connexion", async (req, rep) =>{
             })
         }
 
-    } catch(error) {
+    } catch (error) {
         rep.status(500).json({
-            erreur: error 
+            erreur: error
         })
     }
 })

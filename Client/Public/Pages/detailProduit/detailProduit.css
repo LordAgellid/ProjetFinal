@@ -143,7 +143,7 @@ button:hover {
     align-items: center;
 }
 
-.product-pricing-title #etherium {
+.product-pricing-title .etherium {
     width: 3.5%;
     height: 3.5%;
     margin-left: auto;
@@ -152,8 +152,19 @@ button:hover {
 .product-price {
     padding: 25px;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
     border-radius: 0px 0px 15px 15px;
     background-color: var(--gray);
+}
+
+.product-price p {
+    display: inline-flex;
+}
+
+.product-can-price {
+    font-weight: 200;
+    font-style: italic;
 }
 
 .product-description {

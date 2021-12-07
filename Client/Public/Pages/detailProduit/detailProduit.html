@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,17 @@
     <title>INFINITE SHOP - Détails produit</title>
 
     <link rel="shortcut icon" href="../../../Public/Medias/Branding/INFINITEFavIcon.png" type="image.png">
-    <link rel="stylesheet" href="../../../Public/Pages/Accueil/accueil.css">
+    <link rel="stylesheet" href="../../../Public/Pages/detailProduit/detailProduit.css">
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <script src="../../../Public/Pages/Accueil/accueil.js"></script>
+    <script src="../../../Public/Pages/detailProduit/detailProduit.js"></script>
 </head>
+
 <body>
 
     <header>
         <div class="logo-container">
-            <a href="http://localhost:3000/Accueil"><img src="../../../Public/Medias/Branding/INFINITELogo.png" alt="INFINITE Logo" class="logo"></a>
+            <a href="http://localhost:3000/Accueil"><img src="../../../Public/Medias/Branding/INFINITELogo.png"
+                    alt="INFINITE Logo" class="logo"></a>
         </div>
         <nav>
             <ul class="nav_links">
@@ -32,49 +31,46 @@
         <a href="http://localhost:3000/Connexion" class="cta"><button>Se connecter</button></a>
     </header>
 
-    <div class="hero-section">
-        <div class="hero-section-for-title">
-            <p class="hero-section-title">
-                Bienvenue sur<br><span class="hero-section-title-emphasis">INFINITE SHOP</span>  
-            </p>
-        </div>
-    </div>
+    <div class="showcase-section-product">
 
-    <div id="description" class="description">
-        <div class="description-section">
-            <p class="description-section-paragraph">
-                <span class="description-section-paragraph-emphasis">INFINITE SHOP</span> est le seul magasin de NFT en ligne que vous retrouverez avec une gamme de produits à l’infini. Nous réunissons sur notre plateforme plusieurs artistes renommés pour leur oeuvre à couper le souffle. Rejoignez le mouvement et soyez satisfaits à l'infini.
-            </p>
-        </div>
-    </div>
-
-    <div id="Produits" class="showcase-section">
-        <div class="showcase-section-title">
-            <h1>NOS PRODUITS</h1>
+        <div id="column-1" class="column-1">
+            <!-- <img class="product-image" src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST"> -->
+            <div class="product-pricing">
+                <div class="product-pricing-title">
+                    <h1>Prix actuel</h1>
+                    <img class="etherium" src="../../../Public/Medias/Icons/Eth-Icon.png" alt="Etherium Icon">
+                </div>
+                <div id="product-price" class="product-price">
+                    <!-- <p>Prix</p> -->
+                </div>
+            </div>
         </div>
 
-        <div id="produits" class="showcase-section-products">
-            <!-- <div class="product">
-                <div class="product-image-container">
-                    <a href="#"><img class="product-image" src="../../../Public/Medias/Images/AMETHYST.png" alt="AMETHYST"></a>
+        <div id="column-2" class="column-2">
+            <div id="product-name" class="product-name">
+                <!-- <h1>AMETHYST</h1> -->
+            </div>
+            <div class="product-description">
+                <div class="product-description-title">
+                    <h1>&#x2630; Description</h1>
                 </div>
-                <div class="product-infos">
-                    <p class="product-title">AMETHYST</p>
-                    <p class="price">0.01 ETH</p>
+                <div id="description" class="description">
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis beatae adipisci alias odio unde illo accusamus incidunt voluptatum fuga delectus molestiae asperiores quia similique consequuntur quam aliquam, eos corporis corrupti.
+                    Debitis nihil fugit omnis unde ut harum voluptatum officia cupiditate voluptatem enim, ad vero laboriosam quam nam tempore dolores impedit blanditiis incidunt labore dolore! Qui optio unde tempora doloribus doloremque.</p> -->
                 </div>
-                
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
+            </div>
+            <div class="product-quantity">
+                <div class="product-quantity-title">
+                    <h1>Quantité</h1>
                 </div>
-            </div> -->
+                <div id="quantity" class="quantity">
+                    <!-- <p>Voici la quantité restante : </p> -->
+                </div>
+            </div>
         </div>
-            
+
     </div>
-    
 
 </body>
+
 </html>

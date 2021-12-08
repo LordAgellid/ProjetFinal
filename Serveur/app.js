@@ -17,9 +17,7 @@ app.use(express.urlencoded({ extended: false }))
 app.get("/Administrateurs", async (req, rep) => {
     try {
         table = await requete.afficherAdmins()
-
         rep.status(200).json(table)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -31,9 +29,7 @@ app.get("/Administrateurs", async (req, rep) => {
 app.get("/Produits", async (req, rep) => {
     try {
         produits = await requete.afficherProduits()
-
         rep.status(200).json(produits)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -44,10 +40,8 @@ app.get("/Produits", async (req, rep) => {
 /*----------------------------------- PROFILE GET REQUEST -----------------------------------*/
 app.get("/Profil/:id", async (req, rep) => {
     try {
-
         admin = await requete.afficherUnAdmin(req.params.id);
         rep.status(200).json(admin);
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -59,9 +53,7 @@ app.get("/Profil/:id", async (req, rep) => {
 app.get("/Produit/:id", async (req, rep) => {
     try {
         produit = await requete.afficherUnProduit(req.params.id)
-
         rep.status(200).json(produit)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -74,26 +66,23 @@ app.get("/Produit/:id", async (req, rep) => {
 app.post("/Connexion", async (req, rep) => {
     try {
         const table = await requete.afficherAdmins()
-
-        let admin, valide;
+        let admin, valide
 
         const info = {
             id: req.body.id,
             password: req.body.password
-        };
-
-        console.log(info);
+        }
 
         for (i = 0; i < table.length; i++) {
-            valide = 0;
-            admin = table[0];
+            valide = 0
+            admin = table[0]
 
             if (info.id === admin.Username && info.password === admin.Password) {
                 valide += 1
 
                 if (!admin.CompteBloque) {
-                    valide += 1;
-                    break;
+                    valide += 1
+                    break
                 }
             }
         }
@@ -116,7 +105,6 @@ app.post("/Connexion", async (req, rep) => {
                 username: admin.Username
             })
         }
-
     } catch (error) {
         rep.status(500).json({
             erreur: error

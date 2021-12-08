@@ -1,6 +1,7 @@
 function connexion(event) {
 
     event.preventDefault()
+    console.log(event)
 
     let donneeFormulaire = new URLSearchParams(new FormData(event.target))
 
@@ -23,6 +24,5 @@ function connexion(event) {
             else {
                 error.style.display = "block"
             }
-
         })
 }

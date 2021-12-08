@@ -1,120 +1,121 @@
-@import url('http://fonts.cdnfonts.com/css/monument-extended');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("http://fonts.cdnfonts.com/css/monument-extended");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --black: #000;
-    --white: #fff;
-    --darkGray: #151515;
-    --mediumGray: #1f1f1f;
-    --lightGray: #f5f5f5;
-    --font1: 'Monument Extended', sans-serif;
-    --font2: 'Poppins', sans-serif;
+  --black: #000;
+  --white: #fff;
+  --darkGray: #151515;
+  --mediumGray: #1f1f1f;
+  --lightGray: #f5f5f5;
+  --font1: "Monument Extended", sans-serif;
+  --font2: "Poppins", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font1);
-    background-color: var(--mediumGray);
+  font-family: var(--font1);
+  background-color: var(--darkGray);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/
 
 header {
-    height: 75px;
-    display: flex;
-    /* justify-content: flex-end; */
-    align-items: center;
-    padding: 30px 10%;
-    background-color: var(--lightGray);
+  height: 75px;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--lightGray);
 }
 
 .logo-container {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .logo {
-    height: 15px;
-    transition: all 0.15s ease 0s ;
+  height: 15px;
+  transition: all 0.15s ease 0s;
 }
 
-li, a, button {
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: var(--font2);
-    text-decoration: none;
+li,
+a,
+button {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--font2);
+  text-decoration: none;
 }
 
 .nav_links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav_links li {
-    padding: 0px 5px;
-    display: inline-block;
+  padding: 0px 5px;
+  display: inline-block;
 }
 
 .nav_links li a {
-    transition: all 0.15s ease 0s ;
+  transition: all 0.15s ease 0s;
 }
 
 .nav_links li a:hover {
-    font-family: var(--font1);
-    font-size: 17.5px;
+  font-family: var(--font1);
+  font-size: 17.5px;
 }
 
 button {
-    margin-left: 20px;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 8px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
-    transition: all 0.15s ease 0s ;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease 0s;
 }
 
 button:hover {
-    cursor: pointer;
-    color: var(--white);
-    background-color: var(--black);
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
 
 .image-gallery {
-    width: 1750px;
-    margin: 75px auto 75px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-    grid-gap: 50px;
+  width: 1750px;
+  margin: 75px auto 75px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-gap: 50px;
 }
 
 .image-gallery img {
-    width: 550px;
-    transition: all 0.15s ease 0s;
-    border-radius: 10px;
+  width: 550px;
+  transition: all 0.15s ease 0s;
+  border-radius: 10px;
 }
 
 .image-gallery img:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 50px var(--black);
-    transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0px 0px 50px var(--black);
+  transform: scale(1.05);
 }

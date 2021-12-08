@@ -1,251 +1,284 @@
-@import url("font-awesome/css/fontawesome-all.min.css");
-@import url('http://fonts.cdnfonts.com/css/monument-extended');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("http://fonts.cdnfonts.com/css/monument-extended");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --black: #000;
-    --white: #fff;
-    --darkGray: #151515;
-    --mediumGray: #1f1f1f;
-    --lightGray: #f5f5f5;
-    --lightPink: #f899c3;
-    --darkPink: #b8114a;
-    --font1: 'Monument Extended', sans-serif;
-    --font2: 'Poppins', sans-serif;
+  --black: #000;
+  --white: #fff;
+  --darkGray: #151515;
+  --mediumGray: #1f1f1f;
+  --lightGray: #f5f5f5;
+  --lightPink: #f899c3;
+  --darkPink: #b8114a;
+  --font1: "Monument Extended", sans-serif;
+  --font2: "Poppins", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font1);
-    background-color: var(--mediumGray);
+  font-family: var(--font1);
+  background-color: var(--mediumGray);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/
 
 header {
-    height: 75px;
-    display: flex;
-    /* justify-content: flex-end; */
-    align-items: center;
-    padding: 30px 10%;
-    background-color: var(--lightGray);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--lightGray);
 }
 
 .logo-container {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .logo {
-    height: 15px;
-    transition: all 0.15s ease 0s ;
+  height: 15px;
+  transition: all 0.15s ease 0s;
 }
 
-li, a, button {
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: var(--font2);
-    text-decoration: none;
+li,
+a,
+button {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--font2);
+  text-decoration: none;
 }
 
 .nav_links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav_links li {
-    padding: 0px 5px;
-    display: inline-block;
+  padding: 0px 5px;
+  display: inline-block;
 }
 
 .nav_links li a {
-    transition: all 0.15s ease 0s ;
+  transition: all 0.15s ease 0s;
 }
 
 .nav_links li a:hover {
-    font-family: var(--font1);
-    font-size: 17.5px;
+  font-family: var(--font1);
+  font-size: 17.5px;
 }
 
 button {
-    margin-left: 20px;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 8px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
-    transition: all 0.15s ease 0s ;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease 0s;
 }
 
 button:hover {
-    cursor: pointer;
-    color: var(--white);
-    background-color: var(--black);
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
 
 .hero-section {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .hero-section-for-title {
-    padding-top: 35vh;
-    padding-bottom: 40vh;
-    text-align: center;
+  padding-top: 35vh;
+  padding-bottom: 40vh;
+  text-align: center;
 }
 
 .hero-section-title {
-    color: var(--black);
-    font-family: var(--font2);
-    font-size: 100px;
-    line-height: 100px;
+  color: var(--black);
+  font-family: var(--font2);
+  font-size: 100px;
+  line-height: 100px;
 }
 
 .hero-section-title-emphasis {
-    font-family: var(--font1);
-    font-weight: 800;
-    transition: all 0.15s ease 0s ;
+  font-family: var(--font1);
+  font-weight: 800;
+  transition: all 0.15s ease 0s;
 }
 
 .description {
-    background-image: linear-gradient(120deg, var(--mediumGray), var(--black));
+  background-image: linear-gradient(120deg, var(--mediumGray), var(--black));
 }
 
 .description-section {
-    width: 1000px;
-    padding-top: 15vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 15vh;
-    text-align: justify;
+  width: 1000px;
+  padding-top: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15vh;
+  text-align: justify;
 }
 
 .description-section-paragraph {
-    color: var(--white);
-    font-family: var(--font2);
-    font-weight: 200;
-    font-size: 35px;
+  color: var(--white);
+  font-family: var(--font2);
+  font-weight: 200;
+  font-size: 35px;
 }
 
 .description-section-paragraph-emphasis {
-    font-family: var(--font1);
-    font-weight: 800;
-    transition: all 0.15s ease 0s;
+  font-family: var(--font1);
+  font-weight: 800;
+  transition: all 0.15s ease 0s;
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section {
-    width: 100%;
-    margin: auto;
-    padding: 50px 0px 0px;
-    /* background-color: var(--darkGray); */
+  width: 100%;
+  margin: auto;
+  padding: 50px 0px 0px;
+  /* background-color: var(--darkGray); */
 }
 
 .showcase-section-title {
-    width: 100%;
-    color: var(--white);
-    font-size: 25px;
-    text-align: center;
-    margin: 0px auto 50px;
+  width: 100%;
+  color: var(--white);
+  font-size: 25px;
+  text-align: center;
+  margin: 0px auto 50px;
 }
 
 .showcase-section-products {
-    width: 1750px;
-    margin: 0px auto 75px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 50px;
-    /* background-color: lightcoral; */
+  width: 1750px;
+  margin: 0px auto 75px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 50px;
+  /* background-color: lightcoral; */
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section {
-    width: 1750px;
+  width: 1750px;
 }
 
 .product {
-    width: 400px;
-    height: max-content;
-    padding-bottom: 15px;
-    color: var(--white);
-    border-radius: 15px;
-    background-color: var(--darkGray);
-    transition: all 0.15s ease 0s;
+  width: 400px;
+  height: max-content;
+  padding-bottom: 15px;
+  color: var(--white);
+  border-radius: 15px;
+  background-color: var(--darkGray);
+  transition: all 0.15s ease 0s;
 }
 
-.product-image-container, .product-image, a {
-    width: inherit;
+.product-image-container,
+.product-image,
+a {
+  width: inherit;
 }
 
 .product-image {
-    border-radius: 15px 15px 0px 0px;
-    box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.5);
-    transition: all 0.15s ease-in-out 0s;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in-out 0s;
 }
 
 .product-image:hover {
-    border-radius: 15px ;
-    width: 415px;
+  border-radius: 15px;
+  width: 415px;
 }
 
 .product-infos {
-    font-family: var(--font2);
-    font-size: 25px;
-    display: flex;
+  font-family: var(--font2);
+  font-size: 25px;
+  display: flex;
 }
 
 .product-infos {
-    width: inherit;
-    display: inline-flex;
-    padding: 10px 25px 0px;
-    justify-content: space-between;
-    align-items: center;
+  width: inherit;
+  display: inline-flex;
+  padding: 10px 25px 0px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .product-infos .price {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .product-infos .etherium {
-    width: 3.5%;
-    height: 3.5%;
-    margin-left: 10px;
+  width: 3.5%;
+  height: 3.5%;
+  margin-left: 10px;
 }
 
 .rating {
-    padding: 0px 25px;
+  padding: 0px 25px;
 }
 
 .rating span {
-    font-size: 20px;
-    cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .checked {
-    color: orange;
-    transition: all 0.15s ease 0s;
+  color: orange;
+  transition: all 0.15s ease 0s;
 }
 
 .rating span:hover {
-    font-size: 25px;
-    cursor: pointer;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/*---------------------------------------------  ---------------------------------------------*/
+
+.footer-container {
+  background-color: var(--lightGray);
+  padding: 5% 30%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.copyright {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 15px;
+  font-family: var(--font2);
+  line-height: 30px;
+}
+
+.nav-links-footer {
+  list-style: none;
+}
+
+.nav-links-footer li {
+  line-height: 35px;
+  transition: all 0.15s ease 0s;
+}
+
+.nav-links-footer li a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
 }

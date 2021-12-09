@@ -27,7 +27,7 @@ function afficherUnAdmin(admin) {
 function afficherUnProduit(produit) {
   return knex("Produits")
     .select("Nom", "Quantite", "Prix", "Description", "URL")
-    .where({ URL: produit })
+    .where({ Identifiant: produit })
 }
 
 /*----------------------------------- EXPORTING FUNCTIONS -----------------------------------*/

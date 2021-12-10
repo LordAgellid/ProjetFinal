@@ -30,11 +30,21 @@ function afficherUnProduit(produit) {
     .where({ URL: produit })
 }
 
+function bloquerAdmin(trueOrFalse){
+  return knex('Administrateurs')
+  .where('Username', '=', "martinc")
+  .update({
+    CompteBloque: trueOrFalse,
+    thisKeyIsSkipped: undefined
+  })
+}
+
 /*----------------------------------- EXPORTING FUNCTIONS -----------------------------------*/
 
 module.exports = {
   afficherAdmins,
   afficherProduits,
   afficherUnAdmin,
-  afficherUnProduit
+  afficherUnProduit,
+  bloquerAdmin
 };

@@ -69,6 +69,21 @@ app.get("/Produit/:id", async (req, rep) => {
     }
 })
 
+/*----------------------------------- BLOQUER COMPTE -----------------------------------*/
+
+app.post('/bloquerAdmin/:id', async (req, rep) =>{
+    try {
+        bloquer = await requete.bloquerAdmin(parseInt(req.params.id))
+
+        rep.status(200).json(bloquer)
+
+    } catch (error) {
+        rep.status(500).json({
+            erreur: error
+        })
+    }
+})
+
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
 app.post("/Connexion", async (req, rep) => {
@@ -88,27 +103,27 @@ app.post("/Connexion", async (req, rep) => {
             valide = 0;
             admin = table[0];
 
-            if (info.id === admin.Username && info.password === admin.Password) {
-                valide += 1
-
-                if (!admin.CompteBloque) {
-                    valide += 1;
+            if (!admin.CompteBloque) {
+                valide += 1;
+                if (info.id === admin.Username && info.password === admin.Password) {
+                    valide += 1
                     break;
+                
                 }
             }
         }
 
-        if (valide === 0) {
+        if (valide === 1) {
             rep.status(200).json({
                 success: false,
                 compteBloque: false,
-                erreur: "Mot de passe ou nom d'utilisateur invalide "
+                erreur: "Mot de passe ou nom d'utilisateur invalide, il vous reste "
             })
-        } else if (valide === 1) {
+        } else if (valide === 0) {
             rep.status(200).json({
                 success: false,
                 compteBloque: true,
-                erreur: "Compte Bloque"
+                erreur: "Compte bloqué "
             })
         } else {
             rep.status(200).json({

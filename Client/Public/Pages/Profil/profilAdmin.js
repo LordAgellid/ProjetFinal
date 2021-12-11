@@ -58,7 +58,7 @@ function load() {
 
                 let tdImg = document.createElement("td")
                 let img = document.createElement("img")
-                img.setAttribute("src", "../../../Public/Medias/Images/" + produit.URL)
+                img.setAttribute("src", `../../../Public/Medias/Images/${produit.URL}`)
                 img.setAttribute("alt", produit.Nom)
                 img.classList.add("product-image")
                 tdImg.appendChild(img)

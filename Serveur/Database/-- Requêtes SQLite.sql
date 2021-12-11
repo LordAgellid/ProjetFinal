@@ -97,3 +97,5 @@ DELETE FROM Produits
 
 SELECT * FROM Administrateurs
 WHERE Username = "martinc"
+
+-- UPDATE Administrateurs SET CompteBloque = true WHERE Username = "martinc" 

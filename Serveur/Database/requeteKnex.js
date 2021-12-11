@@ -30,11 +30,34 @@ function afficherUnProduit(produit) {
     .where({ Identifiant: produit })
 }
 
+function bloquerAdmin(trueOrFalse){
+  return knex('Administrateurs')
+  .where('Username', '=', "martinc")
+  .update({
+    CompteBloque: trueOrFalse,
+    thisKeyIsSkipped: undefined
+  })
+}
+
+function modifierTable(id, nom, qte, prix, description, url){
+  return knex('Administrateurs')
+  .where('Identifiant', '=', id)
+  .update({
+    Nom: nom,
+    Quantite: qte,
+    Prix: prix,
+    Description: description,
+    URL: url,
+    thisKeyIsSkipped: undefined
+  })
+}
+
 /*----------------------------------- EXPORTING FUNCTIONS -----------------------------------*/
 
 module.exports = {
   afficherAdmins,
   afficherProduits,
   afficherUnAdmin,
-  afficherUnProduit
+  afficherUnProduit,
+  bloquerAdmin
 };

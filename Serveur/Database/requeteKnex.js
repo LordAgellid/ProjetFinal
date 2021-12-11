@@ -39,6 +39,19 @@ function bloquerAdmin(trueOrFalse){
   })
 }
 
+function modifierTable(id, nom, qte, prix, description, url){
+  return knex('Administrateurs')
+  .where('Identifiant', '=', id)
+  .update({
+    Nom: nom,
+    Quantite: qte,
+    Prix: prix,
+    Description: description,
+    URL: url,
+    thisKeyIsSkipped: undefined
+  })
+}
+
 /*----------------------------------- EXPORTING FUNCTIONS -----------------------------------*/
 
 module.exports = {

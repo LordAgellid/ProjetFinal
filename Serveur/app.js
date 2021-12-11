@@ -84,6 +84,10 @@ app.post('/bloquerAdmin/:id', async (req, rep) =>{
     }
 })
 
+/*----------------------------------- MODIFIER TABLE PUT REQUEST -----------------------------------*/
+
+// app.put(/)
+
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
 app.post("/Connexion", async (req, rep) => {

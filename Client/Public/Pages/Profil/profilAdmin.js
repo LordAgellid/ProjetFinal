@@ -61,8 +61,10 @@ function load() {
 
                 let tdImg = document.createElement("td")
                 let img = document.createElement("img")
+                
                 img.setAttribute("src", "../../../Public/Medias/Images/" + URL)
                 img.setAttribute("alt", Nom)
+
                 img.classList.add("product-image")
                 tdImg.appendChild(img)
                 tdImg.setAttribute('class', `${Identifiant}`)

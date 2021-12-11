@@ -7,7 +7,7 @@ function load() {
 
     console.log(image)
 
-    fetch("http://localhost:5000/Produit/" + image)
+    fetch(`http://localhost:5000/Produit/${image}`)
         .then(rep => {
             return rep.json()
         })
@@ -28,7 +28,7 @@ function load() {
             let URL = produit[0].URL
 
             let img = document.createElement("img")
-            img.setAttribute("src", "../../../Public/Medias/Images/" + URL)
+            img.setAttribute("src", `../../../Public/Medias/Images/${URL}`)
             img.setAttribute("alt", Nom)
             img.classList.add("product-image")
             column1.insertAdjacentElement("afterbegin", img)

@@ -19,11 +19,11 @@ function load() {
                 products.appendChild(productImageContainer)
 
                 let lienProduit = document.createElement('a')
-                lienProduit.href = 'http://localhost:3000/Details-produit/?id=' + produit.URL
+                lienProduit.href = `http://localhost:3000/Details-produit/?id=${produit.Identifiant}`
                 productImageContainer.appendChild(lienProduit)
 
                 let img = document.createElement("img")
-                img.setAttribute("src", "../../../Public/Medias/Images/" + produit.URL)
+                img.setAttribute("src", `../../../Public/Medias/Images/${produit.URL}`)
                 img.setAttribute("alt", produit.Nom)
                 img.classList.add("product-image")
                 lienProduit.appendChild(img)

@@ -1,208 +1,213 @@
-@import url("font-awesome/css/fontawesome-all.min.css");
-@import url('http://fonts.cdnfonts.com/css/monument-extended');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("http://fonts.cdnfonts.com/css/monument-extended");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --black: #000;
-    --white: #fff;
-    --darkGray: #151515;
-    --mediumGray: #1f1f1f;
-    --gray: #2b2b2b;
-    --lightGray: #f5f5f5;
-    --lightPink: #f899c3;
-    --darkPink: #b8114a;
-    --font1: 'Monument Extended', sans-serif;
-    --font2: 'Poppins', sans-serif;
+  --black: #000;
+  --white: #fff;
+  --darkGray: #151515;
+  --mediumGray: #1f1f1f;
+  --gray: #2b2b2b;
+  --lightGray: #f5f5f5;
+  --lightPink: #f899c3;
+  --darkPink: #b8114a;
+  --font1: "Monument Extended", sans-serif;
+  --font2: "Poppins", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font1);
-    background-color: var(--mediumGray);
+  font-family: var(--font1);
+  background-color: var(--mediumGray);
 }
 
 /*----------------------------------- NAVIGATION BAR -----------------------------------*/
 
 header {
-    height: 75px;
-    display: flex;
-    /* justify-content: flex-end; */
-    align-items: center;
-    padding: 30px 10%;
-    background-color: var(--lightGray);
+  height: 75px;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--lightGray);
 }
 
 .logo-container {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .logo {
-    height: 15px;
-    transition: all 0.15s ease 0s ;
+  height: 15px;
+  transition: all 0.15s ease 0s;
 }
 
-li, a, button {
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: var(--font2);
-    text-decoration: none;
+li,
+a,
+button {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--font2);
+  text-decoration: none;
 }
 
 .nav_links {
-    list-style: none;
+  list-style: none;
 }
 
 .nav_links li {
-    padding: 0px 5px;
-    display: inline-block;
+  padding: 0px 5px;
+  display: inline-block;
 }
 
 .nav_links li a {
-    transition: all 0.15s ease 0s ;
+  transition: all 0.15s ease 0s;
 }
 
 .nav_links li a:hover {
-    font-family: var(--font1);
-    font-size: 17.5px;
+  font-family: var(--font1);
+  font-size: 17.5px;
 }
 
 button {
-    margin-left: 20px;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 8px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
-    transition: all 0.15s ease 0s ;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease 0s;
 }
 
 button:hover {
-    cursor: pointer;
-    color: var(--white);
-    background-color: var(--black);
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 /*---------------------------------------------  ---------------------------------------------*/
 
 .showcase-section-product {
-    color: var(--white);
-    width: 1500px;
-    margin: 75px auto 75px;
-    font-family: var(--font2);
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: 650px auto;
-    /* background-color: lightcoral; */
+  color: var(--white);
+  width: 1500px;
+  margin: 75px auto 75px;
+  font-family: var(--font2);
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 650px auto;
+  /* background-color: lightcoral; */
 }
 
 .product-image {
-    width: 650px;
-    margin-bottom: 50px;
-    border: px solid var(--black);
-    border-radius: 15px;
-    transition: all 0.15s ease 0s ;
-    cursor: pointer;
+  width: 650px;
+  margin-bottom: 50px;
+  border: px solid var(--black);
+  border-radius: 15px;
+  position: relative;
+  top: 0px;
+  transition: all 0.25s ease 0.15s;
+  cursor: pointer;
 }
 
 .product-image:hover {
-    box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  top: -5px;
+  box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.15);
 }
 
 .product-pricing {
-    height: max-content;
-    border: 1px solid var(--black);
-    border-radius: 15px;
+  height: max-content;
+  border: 1px solid var(--black);
+  border-radius: 15px;
 }
 
-.product-pricing-title, .product-description-title, .product-quantity-title {
-    padding: 25px;
-    border-radius: 15px 15px 0px 0px;
-    background-color: var(--darkGray);
+.product-pricing-title,
+.product-description-title,
+.product-quantity-title {
+  padding: 25px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: var(--darkGray);
 }
 
 .product-pricing-title {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .product-pricing-title .etherium {
-    width: 3.5%;
-    height: 3.5%;
-    margin-left: auto;
+  width: 3.5%;
+  height: 3.5%;
+  margin-left: auto;
 }
 
 .product-price {
-    padding: 25px;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 0px 0px 15px 15px;
-    background-color: var(--gray);
+  padding: 25px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--gray);
 }
 
 .product-price p {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .product-can-price {
-    font-weight: 200;
-    font-style: italic;
+  font-weight: 200;
+  font-style: italic;
 }
 
 .product-description {
-    height: auto;
-    margin-bottom: 50px;
-    border: 1px solid var(--black);
-    border-radius: 15px;
-    /* background-color: var(--darkPink); */
+  height: auto;
+  margin-bottom: 50px;
+  border: 1px solid var(--black);
+  border-radius: 15px;
 }
 
 .product-name {
-    width: max-content;
-    padding: 25px;
-    font-size: 30px;
-    margin-bottom: 50px;
-    border: 1px solid var(--black);
-    border-radius: 15px;
-    background-image: linear-gradient(120deg, var(--darkGray), var(--black));
+  width: max-content;
+  padding: 25px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  background-image: linear-gradient(120deg, var(--darkGray), var(--black));
 }
 
 .description {
-    padding: 25px;
-    font-size: 20px;
-    border-radius: 0px 0px 15px 15px;
-    background-color: var(--gray);
+  padding: 25px;
+  font-size: 20px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--gray);
 }
 
 .product-quantity {
-    height: auto;
-    margin-bottom: 50px;
-    border: 1px solid var(--black);
-    border-radius: 15px;
-    /* background-color: var(--darkPink); */
+  height: auto;
+  margin-bottom: 50px;
+  border: 1px solid var(--black);
+  border-radius: 15px;
 }
 
 .quantity {
-    padding: 25px;
-    font-size: 20px;
-    border-radius: 0px 0px 15px 15px;
-    background-color: var(--gray);
+  padding: 25px;
+  font-size: 20px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--gray);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,10 @@
     <link rel="stylesheet" href="../../../Public/Pages/Connexion/connexion.css">
 
     <script src="../../../Public/Pages/Connexion/connexion.js"></script>
-    
-</head>
-<body>
 
+</head>
+
+<body>
     <header>
         <div class="logo-container">
             <a href="http://localhost:3000/Accueil"><img src="../../../Public/Medias/Branding/INFINITELogo.png" alt="INFINITE Logo" class="logo"></a>
@@ -30,33 +31,29 @@
     </header>
 
     <div class="form-container">
-        
         <form id="connectToAccountFormulaire" name="form" onsubmit="connexion(event)">
-
             <h1 id="form-container-Title">Connexion</h1>
-
             <div class="formSection">
 
                 <label for="id">Identifiant</label>
-                <input type="text" placeholder="Entrez votre identifiant" name="id" id="id" autocomplete="email, username">
-                
+                <input type="text" placeholder="Entrez votre identifiant" name="id" id="id"
+                    autocomplete="email, username">
+
                 <label for="password">Mot de passe</label>
-                <input type="password" placeholder="••••••••••" name="password" id="password" min="6" autocomplete="current-password">
-    
+                <input type="password" placeholder="••••••••••" name="password" id="password" min="6"
+                    autocomplete="current-password">
+
                 <div id="error">
                     <!-- <p id="errorMessage">Nom d'utilisateur ou mot de passe invalide.</p> -->
                     <p id="errorMessage"></p>
                 </div>
-                
+
             </div>
-            
-            <div id="submitButton">                
+            <div id="submitButton">
                 <input type="submit" value="Se connecter &#x203A;">
             </div>
-
         </form>
-
     </div>
-
 </body>
+
 </html>

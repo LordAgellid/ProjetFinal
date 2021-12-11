@@ -21,8 +21,26 @@ function connexion(event) {
                 url.searchParams.set("id", repJson.username)
                 window.location.href = url
             }
-            else {
+            else if (repJson.compteBloque) {
+                errorMessage.innerHTML = repJson.erreur
                 error.style.display = "block"
+            }
+
+            else if (!repJson.compteBloque) {
+                nbEssai--
+                if (nbEssai === 0) {
+                    fetch('http://localhost:5000/bloquerAdmin/1', {
+                        method: "POST"
+                    })
+                        .then(rep => {
+                            errorMessage.innerHTML = 'Compte bloqué'
+                            return rep.json()
+                        })
+                } else {
+                    errorMessage.innerHTML = `${repJson.erreur} ${nbEssai} Essais`
+                    error.style.display = "block"
+
+                }
             }
         })
 }

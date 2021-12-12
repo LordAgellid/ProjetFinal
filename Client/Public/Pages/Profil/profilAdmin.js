@@ -136,6 +136,8 @@ function load() {
 
             const tableau = document.querySelector("#tbody")
 
+            console.log(tableau)
+
             tableau.addEventListener("click", (e) => {
 
                 let classe = e.target.className
@@ -143,11 +145,13 @@ function load() {
                 if (classe === "btnEditer") {
                     
                     let td = (e.target.parentElement)
+                    console.log(td)
                     let tr = td.parentNode
+                    console.log(tr)
                     let ligne = tr.id
 
                     // let img = document.getElementById("img-" + ligne).innerHTML
-                    let identifiant = document.getElementById("identifiant-" + ligne).innerHTML
+                    let identifiant = document.getElementById("identifiant-" + ligne)
                     let nom = document.getElementById("p-nom-" + ligne)
                     let quantite = document.getElementById("p-quantite-" + ligne)
                     let prix = document.getElementById("p-prix-" + ligne)

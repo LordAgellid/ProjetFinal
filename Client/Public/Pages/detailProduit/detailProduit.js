@@ -5,14 +5,11 @@ function load() {
     const params = new URLSearchParams(window.location.search)
     const image = params.get("id")
 
-    console.log(image)
-
-    fetch(`http://localhost:5000/Produit/${image}`)
+    fetch(`http://localhost:5000/produit/${image}`)
         .then(rep => {
             return rep.json()
         })
         .then(produit => {
-            console.log(produit)
 
             let equivPrixCan = 5524.20
 
@@ -60,4 +57,5 @@ function load() {
             divquantity.appendChild(pquantity)
 
         })
+        
 }

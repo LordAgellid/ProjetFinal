@@ -105,7 +105,7 @@ function load() {
                 let tdDescription = document.createElement("td")
                 let pDescription = document.createElement("p")
                 pDescription.innerHTML = Description
-                tdDescription.setAttribute('class', `${Identifiant}`)
+                tdDescription.setAttribute('class', `${Identifiant} descriptiontextarea`)
                 tdDescription.setAttribute('id', `description-${Identifiant}`)
                 pDescription.setAttribute('id', `p-description-${Identifiant}`)
                 tdDescription.appendChild(pDescription)
@@ -122,7 +122,7 @@ function load() {
                 tr.appendChild(tdURL)
 
                 const tdBoutons = document.createElement('td')
-                const btnEditer = document.createElement('span')
+                const btnEditer = document.createElement('button')
                 btnEditer.innerHTML = 'Éditer'
                 btnEditer.setAttribute('class', `btnEditer`)
                 btnEditer.setAttribute('id', `btnEditer-${Identifiant}`)
@@ -130,8 +130,6 @@ function load() {
                 tdBoutons.appendChild(btnEditer)
                 
                 table.appendChild(tr)
-
-
 
             })
 
@@ -153,32 +151,43 @@ function load() {
                     let url = document.getElementById('p-url-' + ligne)
                     // // console.log(`${identifiant} \n${nom} \n${quantite} \n${prix} \n${description} \n${url}`)
 
-                    const textAreaNom = document.createElement('textarea')
-                    textAreaNom.value = nom.innerHTML
-                    nom.parentNode.replaceChild(textAreaNom, nom)
+                    const inputNom = document.createElement('input')
+                    inputNom.setAttribute("class", "inputNom")
+                    inputNom.type = "text"
+                    inputNom.required = true
+                    inputNom.value = nom.innerHTML
+                    nom.parentNode.replaceChild(inputNom, nom)
 
-                    const textAreaQuantite = document.createElement('textarea')
-                    textAreaQuantite.innerHTML = quantite.innerHTML
-                    quantite.parentNode.replaceChild(textAreaQuantite, quantite)
+                    const inputQuantite = document.createElement('input')
+                    inputQuantite.setAttribute("class", "inputQuantite")
+                    inputQuantite.type = "number"
+                    inputQuantite.min = "0"
+                    inputQuantite.value = quantite.innerHTML
+                    quantite.parentNode.replaceChild(inputQuantite, quantite)
 
-                    const textAreaPrix = document.createElement('textarea')
-                    textAreaPrix.innerHTML = prix.innerHTML
-                    prix.parentNode.replaceChild(textAreaPrix, prix)
+                    const inputPrix = document.createElement('input')
+                    inputPrix.setAttribute("class", "inputPrix")
+                    inputPrix.type = "number"
+                    inputPrix.min = "0"
+                    inputPrix.value = prix.innerHTML
+                    prix.parentNode.replaceChild(inputPrix, prix)
 
                     const textAreaDescription = document.createElement('textarea')
                     textAreaDescription.innerHTML = description.innerHTML
                     description.parentNode.replaceChild(textAreaDescription, description)
 
-                    const textAreaUrl = document.createElement('textarea')
-                    textAreaUrl.innerHTML = url.innerHTML
-                    url.parentNode.replaceChild(textAreaUrl, url)
+                    const inputURL = document.createElement('input')
+                    inputURL.setAttribute("class", "inputURL")
+                    inputURL.type = "text"
+                    inputURL.value = url.innerHTML
+                    url.parentNode.replaceChild(inputURL, url)
 
-                    const boutonEnregistrer = document.createElement('span')
+                    const boutonEnregistrer = document.createElement('button')
                     boutonEnregistrer.innerHTML = 'Enregistrer'
                     boutonEnregistrer.setAttribute('class', 'btnEnregistrer')
                     boutonEnregistrer.setAttribute('id', `btnEnregistrer-${identifiant}`)
 
-                    const boutonAnnuler = document.createElement('span')
+                    const boutonAnnuler = document.createElement('button')
                     boutonAnnuler.innerHTML = 'Annuler'
                     boutonAnnuler.setAttribute('class', 'btnAnnuler')
                     boutonAnnuler.setAttribute('id', `btnAnnuler-${identifiant}`)
@@ -188,19 +197,21 @@ function load() {
                     td.appendChild(boutonEnregistrer)
                     td.appendChild(boutonAnnuler)
 
-                    const boutonEditer = document.createElement('span')
+                    const boutonEditer = document.createElement('button')
                     boutonEditer.innerHTML = 'Éditer'
                     boutonEditer.setAttribute('class', `btnEditer`)
                     boutonEditer.setAttribute('id', `btnEditer-${identifiant}`)
                     ///////////////////////////////////////////////////////////////////
 
                     td.addEventListener('click', (e) => {
+
                         if (e.target.className === 'btnAnnuler') {
-                            textAreaNom.parentNode.replaceChild(nom, textAreaNom)
-                            textAreaQuantite.parentNode.replaceChild(quantite, textAreaQuantite)
-                            textAreaPrix.parentNode.replaceChild(prix, textAreaPrix)
+
+                            inputNom.parentNode.replaceChild(nom, inputNom)
+                            inputQuantite.parentNode.replaceChild(quantite, inputQuantite)
+                            inputPrix.parentNode.replaceChild(prix, inputPrix)
                             textAreaDescription.parentNode.replaceChild(description, textAreaDescription)
-                            textAreaUrl.parentNode.replaceChild(url, textAreaUrl)
+                            inputURL.parentNode.replaceChild(url, inputURL)
 
                             td.removeChild(boutonAnnuler)
                             td.removeChild(boutonEnregistrer)
@@ -208,33 +219,44 @@ function load() {
                             td.appendChild(boutonEditer)
 
                         } else if (e.target.className === 'btnEnregistrer') {
-                            nom.innerHTML = textAreaNom.value
-                            textAreaNom.parentNode.replaceChild(nom, textAreaNom)
 
-                            quantite.innerHTML = textAreaQuantite.value
-                            textAreaQuantite.parentNode.replaceChild(quantite, textAreaQuantite)
+                            nom.innerHTML = inputNom.value
+                            inputNom.parentNode.replaceChild(nom, inputNom)
 
-                            prix.innerHTML = textAreaPrix.value
-                            textAreaPrix.parentNode.replaceChild(prix, textAreaPrix)
+                            quantite.innerHTML = inputQuantite.value
+                            inputQuantite.parentNode.replaceChild(quantite, inputQuantite)
+
+                            prix.innerHTML = inputPrix.value
+                            inputPrix.parentNode.replaceChild(prix, inputPrix)
 
                             description.innerHTML = textAreaDescription.value
                             textAreaDescription.parentNode.replaceChild(description, textAreaDescription)
 
-                            url.innerHTML = textAreaUrl.value
-                            textAreaUrl.parentNode.replaceChild(url, textAreaUrl)
+                            url.innerHTML = inputURL.value
+                            inputURL.parentNode.replaceChild(url, inputURL)
 
                             td.removeChild(boutonAnnuler)
                             td.removeChild(boutonEnregistrer)
 
                             td.appendChild(boutonEditer)
 
+                            fetch(`http://localhost:5000/modifier/${ligne}`, {
+                                headers: {'Content-Type':'application/x-www-form-urlencoded'},
+                                method: 'PUT',
+                                body: `Nom=${nom.innerHTML}&Quantite=${quantite.innerHTML}&Prix=${prix.innerHTML}&Description=${description.innerHTML}&URL=${url.innerHTML}`
+                            })
+                            .then(rep => {
+                                return rep.json()
+                            })
 
                         }
+
                     })
+
                 }
 
-
             })
-        })
-}
 
+        })
+
+}

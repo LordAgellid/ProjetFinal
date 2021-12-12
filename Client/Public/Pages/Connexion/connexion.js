@@ -1,4 +1,5 @@
 let nbEssai = 3
+
 function connexion(event) {
 
     event.preventDefault()
@@ -38,31 +39,16 @@ function connexion(event) {
                         method: "POST"
                     })
                         .then(rep => {
-                            errorMessage.innerHTML = 'Compte bloqué'
+                            errorMessage.innerHTML = 'Compte bloqué.'
                             return rep.json()
                         })
                 } else {
-                    errorMessage.innerHTML = `${repJson.erreur} ${nbEssai} Essais`
+                    errorMessage.innerHTML = `${repJson.erreur} ${nbEssai} essai(s)`
                     error.style.display = "block"
-
                 }
+
             }
 
-            else if (!repJson.compteBloque) {
-                nbEssai--
-                if (nbEssai === 0) {
-                    fetch('http://localhost:5000/bloquerAdmin/1', {
-                        method: "POST"
-                    })
-                        .then(rep => {
-                            errorMessage.innerHTML = 'Compte bloqué'
-                            return rep.json()
-                        })
-                } else {
-                    errorMessage.innerHTML = `${repJson.erreur} ${nbEssai} Essais`
-                    error.style.display = "block"
-
-                }
-            }
         })
+
 }

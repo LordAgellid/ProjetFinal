@@ -8,18 +8,14 @@ const PORT = process.env.PORT || 5000;
 /*----------------------------------- READING/LISTENING PORTS -----------------------------------*/
 
 app.use(cors())
-
 app.set('json spaces', 2)
-
 app.use(express.urlencoded({ extended: false }))
 
 /*----------------------------------- PROFILES GET REQUEST -----------------------------------*/
-app.get("/Administrateurs", async (req, rep) => {
+app.get("/administrateurs", async (req, rep) => {
     try {
-        table = await requete.afficherAdmins()
-
+        let table = await requete.afficherAdmins()
         rep.status(200).json(table)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -28,12 +24,10 @@ app.get("/Administrateurs", async (req, rep) => {
 })
 
 /*----------------------------------- PRODUCTS GET REQUEST -----------------------------------*/
-app.get("/Produits", async (req, rep) => {
+app.get("/produits", async (req, rep) => {
     try {
-        produits = await requete.afficherProduits()
-
+        let produits = await requete.afficherProduits()
         rep.status(200).json(produits)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -42,13 +36,12 @@ app.get("/Produits", async (req, rep) => {
 })
 
 /*----------------------------------- PROFILE GET REQUEST -----------------------------------*/
-app.get("/Profil/:id", async (req, rep) => {
+app.get("/profil/:id", async (req, rep) => {
     try {
-
-        admin = await requete.afficherUnAdmin(req.params.id);
+        let admin = await requete.afficherUnAdmin(req.params.id);
         rep.status(200).json(admin);
-
-    } catch (error) {
+    }
+    catch (error) {
         rep.status(500).json({
             erreur: error
         })
@@ -56,12 +49,10 @@ app.get("/Profil/:id", async (req, rep) => {
 })
 
 /*----------------------------------- PRODUCT GET REQUEST -----------------------------------*/
-app.get("/Produit/:id", async (req, rep) => {
+app.get("/produit/:id", async (req, rep) => {
     try {
-        produit = await requete.afficherUnProduit(req.params.id)
-
+        let produit = await requete.afficherUnProduit(req.params.id)
         rep.status(200).json(produit)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -73,10 +64,8 @@ app.get("/Produit/:id", async (req, rep) => {
 
 app.post('/bloquerAdmin/:id', async (req, rep) =>{
     try {
-        bloquer = await requete.bloquerAdmin(parseInt(req.params.id))
-
+        let bloquer = await requete.bloquerAdmin(parseInt(req.params.id))
         rep.status(200).json(bloquer)
-
     } catch (error) {
         rep.status(500).json({
             erreur: error
@@ -85,14 +74,26 @@ app.post('/bloquerAdmin/:id', async (req, rep) =>{
 })
 
 /*----------------------------------- MODIFIER TABLE PUT REQUEST -----------------------------------*/
+app.put("/modifier/:id", async (req, rep) => {
+    try {
+        console.log("Bonjour\n")
+        console.log(req.body)
 
-// app.put(/)
+        let enregistrement = await requete.modifierTable(parseInt(req.params.id), req.body)
+        rep.status(200).json(enregistrement)
+    }
+    catch (error) {
+        rep.status(500).json({
+            erreur: error
+        })
+    }
+})
 
 /*----------------------------------- CONNEXION POST REQUEST -----------------------------------*/
 
-app.post("/Connexion", async (req, rep) => {
+app.post("/connexion", async (req, rep) => {
     try {
-        const table = await requete.afficherAdmins()
+        let table = await requete.afficherAdmins()
 
         let admin, valide;
 
@@ -112,7 +113,6 @@ app.post("/Connexion", async (req, rep) => {
                 if (info.id === admin.Username && info.password === admin.Password) {
                     valide += 1
                     break;
-                
                 }
             }
         }
@@ -127,7 +127,7 @@ app.post("/Connexion", async (req, rep) => {
             rep.status(200).json({
                 success: false,
                 compteBloque: true,
-                erreur: "Compte bloqué "
+                erreur: "Compte bloqué"
             })
         } else {
             rep.status(200).json({

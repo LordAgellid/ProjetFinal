@@ -115,7 +115,6 @@ button:hover {
 }
 
 .image-gallery img:hover {
-  cursor: pointer;
   box-shadow: 0px 0px 50px var(--black);
   transform: scale(1.05);
 }

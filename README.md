@@ -39,3 +39,6 @@
         •	Routages | Makhlouf & Yao
             o	Création des applications de routage pour le côté Client (affichage des pages du site web) et Serveur (requêtes GET, POST & PUT)
             o	Création des applications de routages du côté Client (Yao) et Serveur (Makhlouf)
+        •	Liaison de la page d’administrateur et de la base de données (Front End → Back End) / (Makhlouf & Yao)
+            o	Fonction de récupération des données du Front End
+                	Fonction Knex & routage

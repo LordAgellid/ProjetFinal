@@ -9,6 +9,7 @@
   --lightGray: #f5f5f5;
   --green: #3eb650;
   --red: #e12b38;
+  --orange: #ffbf00;
   --font1: "Monument Extended", sans-serif;
   --font2: "Poppins", sans-serif;
 }
@@ -56,12 +57,14 @@ header {
   transition: all 0.15s ease 0s;
 }
 
-li, a, button{
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: var(--font2);
-    text-decoration: none;
+li,
+a,
+button {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--font2);
+  text-decoration: none;
 }
 
 .nav_links {
@@ -105,6 +108,7 @@ button:hover {
   display: flex;
   justify-content: center;
   background-color: var(--darkGray);
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.35);
 }
 
 .admin-profile-section-info {
@@ -120,7 +124,6 @@ button:hover {
 
 .admin-profile-icon img {
   width: inherit;
-  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
 
@@ -156,8 +159,10 @@ button:hover {
   margin: 0px auto 0px;
 }
 
+/*---------------------------------------------  ---------------------------------------------*/
+
 .table-section {
-  width: 80%;
+  width: 90%;
   padding: 100px 0px;
   margin: 0px auto 0px;
   color: var(--white);
@@ -172,11 +177,15 @@ button:hover {
 }
 
 .table {
-  width: 80%;
+  width: 90%;
   font-family: var(--font2);
   margin: 35px auto 0px;
   border-collapse: collapse;
   background-color: var(--darkGray);
+}
+
+tbody tr {
+  height: 100px;
 }
 
 td,
@@ -186,35 +195,85 @@ th {
   border: 1px solid var(--white);
 }
 
+.descriptiontextarea {
+  width: 600px;
+  height: auto;
+}
 
 .product-image {
-    width: 100px;
-    /* cursor: pointer; */
-    border-radius: 5px;
-    transition: all 0.15s ease-in-out 0s;
+  width: 100px;
+  border-radius: 5px;
 }
 
-span{
-    cursor: pointer;
-    border: none;
-    padding: 5px 20px;
-    border-radius: 8px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
-    transition: all 0.15s ease 0s ;
-    margin-bottom: 10px;
-
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    font-family: var(--font2);
-    text-decoration: none;
-
-    display: block;
+button {
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: var(--font2);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease 0s;
+  display: flex;
+  margin-bottom: 10px;
+  width: fit-content;
 }
 
-span:hover{
-    cursor: pointer;
-    color: var(--white);
-    background-color: var(--green);
+.btnEditer:hover {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.btnEnregistrer:hover {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.btnAnnuler:hover {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+td textarea {
+  resize: none;
+  font-family: var(--font2);
+}
+
+input[type="text"],
+[type="number"],
+textarea {
+  border: none;
+  color: var(--white);
+  background-color: var(--mediumGray);
+  font-size: 15px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  width: 150px;
+}
+
+input[type="number"] {
+  width: 75px;
+}
+
+.inputNom,
+.inputQuantite,
+.inputPrix,
+.inputURL {
+  padding: 10px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+}
+
+.descriptiontextarea textarea {
+  width: 560px;
+  height: 130px;
 }

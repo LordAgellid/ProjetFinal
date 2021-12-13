@@ -122,7 +122,6 @@ button:hover {
   position: relative;
   top: 0px;
   transition: all 0.25s ease 0.15s;
-  cursor: pointer;
 }
 
 .product-image:hover {

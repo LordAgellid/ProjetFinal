@@ -52,10 +52,10 @@ function load() {
             pDescription.innerHTML = Description
             divdescription.appendChild(pDescription)
 
-            let pquantity = document.createElement("p")
-            pquantity.innerHTML = Quantite + " unité(s) restante(s)"
-            divquantity.appendChild(pquantity)
+            let pQuantity = document.createElement("p")
+            pQuantity.innerHTML = Quantite + " unité(s) restante(s)"
+            divquantity.appendChild(pQuantity)
 
         })
-        
+
 }

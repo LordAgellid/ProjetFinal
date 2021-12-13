@@ -16,6 +16,7 @@ function load() {
                 products.classList.add("product")
                 div.appendChild(products)
 
+                
                 let productImageContainer = document.createElement("div")
                 productImageContainer.classList.add("product-image-container")
                 products.appendChild(productImageContainer)

@@ -32,12 +32,12 @@ function connexion(event) {
                 nbEssai--
                 if (nbEssai === 0) {
 
-                    fetch('http://localhost:5000/bloquerAdmin/1', {
-                        method: "POST"
+                    fetch('http://localhost:5000/bloquerAdmin/', {
+                        method: "PUT"
                     })
                         .then(rep => {
 
-                            errorMessage.innerHTML = 'Compte bloqué.'
+                            errorMessage.innerHTML = 'Compte bloqué'
                             return rep.json()
                             
                         })

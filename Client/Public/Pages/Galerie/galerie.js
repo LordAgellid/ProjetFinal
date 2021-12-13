@@ -10,6 +10,7 @@ function load() {
 
             let galerie = document.getElementById('image-gallery')
 
+            //affichage des images
             produits.forEach(produit => {
 
                 let img = document.createElement("img")

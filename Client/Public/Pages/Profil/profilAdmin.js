@@ -15,21 +15,21 @@ function load() {
             let adminInfo = document.getElementById("admin-profile-infos")
 
             //Database variables
-            let Nom = admin[0].Nom
-            let Prenom = admin[0].Prenom
-            let Username = admin[0].Username
-            let Courriel = admin[0].Courriel
+            let nom = admin[0].Nom
+            let prenom = admin[0].Prenom
+            let username = admin[0].Username
+            let courriel = admin[0].Courriel
 
             //First name & last name info
             let h1 = document.createElement("h1")
             h1.setAttribute("id", "prenomNom")
-            h1.innerHTML = Prenom + " " + Nom
+            h1.innerHTML = prenom + " " + nom
             adminInfo.appendChild(h1)
 
             //Username & e-mail info
             let p = document.createElement("p");
             p.setAttribute("id", "usernameCourriel")
-            p.innerHTML = Username + " - " + Courriel
+            p.innerHTML = username + " - " + courriel
             adminInfo.appendChild(p)
 
         })
@@ -41,92 +41,96 @@ function load() {
         .then(produits => {
 
             let table = document.getElementById("tbody")
-
+            // boucle qui lit toutes les donnee et qui creer un tableau avec  
             produits.forEach(produit => {
 
-                let Identifiant = produit.Identifiant
-                let Nom = produit.Nom
-                let Quantite = produit.Quantite
-                let Prix = produit.Prix
-                let Description = produit.Description
-                let URL = produit.URL
-
+                let identifiant = produit.Identifiant
+                let nom = produit.Nom
+                let quantite = produit.Quantite
+                let prix = produit.Prix
+                let description = produit.Description
+                let url = produit.URL
+                
+                // creer le tr (la rangee)
                 let tr = document.createElement("tr")
-                tr.setAttribute("id", Identifiant)
+                tr.setAttribute("id", identifiant)
 
+                // creer le td
                 let tdIdentifiant = document.createElement("td")
-                tdIdentifiant.innerHTML = Identifiant
-                tdIdentifiant.setAttribute("class", `${Identifiant}`)
-                tdIdentifiant.setAttribute("id", `identifiant-${Identifiant}`)
+                tdIdentifiant.innerHTML = identifiant
+                tdIdentifiant.setAttribute("class", `${identifiant}`)
+                tdIdentifiant.setAttribute("id", `identifiant-${identifiant}`)
                 tr.appendChild(tdIdentifiant)
 
+                // creer l'image qui va dans le premier td
                 let tdImg = document.createElement("td")
                 let img = document.createElement("img")
                 
-                img.setAttribute("src", "../../../Public/Medias/Images/" + URL)
-                img.setAttribute("alt", Nom)
+                img.setAttribute("src", "../../../Public/Medias/Images/" + url)
+                img.setAttribute("alt", nom)
 
                 img.classList.add("product-image")
                 tdImg.appendChild(img)
-                tdImg.setAttribute("class", `${Identifiant}`)
-                tdImg.setAttribute("id", `img-${Identifiant}`)
+                tdImg.setAttribute("class", `${identifiant}`)
+                tdImg.setAttribute("id", `img-${identifiant}`)
                 tr.appendChild(tdImg)
 
                 // Nom
                 let tdNom = document.createElement("td")
                 let pNom = document.createElement("p")
-                pNom.innerHTML = Nom
-                tdNom.setAttribute("class", `${Identifiant}`)
-                tdNom.setAttribute("id", `nom-${Identifiant}`)
-                pNom.setAttribute("id", `p-nom-${Identifiant}`)
+                pNom.innerHTML = nom
+                tdNom.setAttribute("class", `${identifiant}`)
+                tdNom.setAttribute("id", `nom-${identifiant}`)
+                pNom.setAttribute("id", `p-nom-${identifiant}`)
                 tdNom.appendChild(pNom)
                 tr.appendChild(tdNom)
 
                 // Quantite
                 let tdQuantite = document.createElement("td")
                 let pQuantite = document.createElement("p")
-                pQuantite.innerHTML = Quantite
-                tdQuantite.setAttribute("class", `${Identifiant}`)
-                tdQuantite.setAttribute("id", `quantite-${Identifiant}`)
-                pQuantite.setAttribute("id", `p-quantite-${Identifiant}`)
+                pQuantite.innerHTML = quantite
+                tdQuantite.setAttribute("class", `${identifiant}`)
+                tdQuantite.setAttribute("id", `quantite-${identifiant}`)
+                pQuantite.setAttribute("id", `p-quantite-${identifiant}`)
                 tdQuantite.appendChild(pQuantite)
                 tr.appendChild(tdQuantite)
 
                 // Prix
                 let tdPrix = document.createElement("td")
                 let pPrix = document.createElement("p")
-                pPrix.innerHTML = Prix
-                tdPrix.setAttribute("class", `${Identifiant}`)
-                tdPrix.setAttribute("id", `prix-${Identifiant}`)
-                pPrix.setAttribute("id", `p-prix-${Identifiant}`)
+                pPrix.innerHTML = prix
+                tdPrix.setAttribute("class", `${identifiant}`)
+                tdPrix.setAttribute("id", `prix-${identifiant}`)
+                pPrix.setAttribute("id", `p-prix-${identifiant}`)
                 tdPrix.appendChild(pPrix)
                 tr.appendChild(tdPrix)
 
                 // Description
                 let tdDescription = document.createElement("td")
                 let pDescription = document.createElement("p")
-                pDescription.innerHTML = Description
-                tdDescription.setAttribute("class", `${Identifiant} descriptiontextarea`)
-                tdDescription.setAttribute("id", `description-${Identifiant}`)
-                pDescription.setAttribute("id", `p-description-${Identifiant}`)
+                pDescription.innerHTML = description
+                tdDescription.setAttribute("class", `${identifiant} descriptiontextarea`)
+                tdDescription.setAttribute("id", `description-${identifiant}`)
+                pDescription.setAttribute("id", `p-description-${identifiant}`)
                 tdDescription.appendChild(pDescription)
                 tr.appendChild(tdDescription)
 
                 // URL
                 let tdURL = document.createElement("td")
                 let pUrl = document.createElement("p")
-                pUrl.innerHTML = URL
-                tdURL.setAttribute("class", `${Identifiant}`)
-                tdURL.setAttribute("id", `url-${Identifiant}`)
-                pUrl.setAttribute("id", `p-url-${Identifiant}`)
+                pUrl.innerHTML = url
+                tdURL.setAttribute("class", `${identifiant}`)
+                tdURL.setAttribute("id", `url-${identifiant}`)
+                pUrl.setAttribute("id", `p-url-${identifiant}`)
                 tdURL.appendChild(pUrl)
                 tr.appendChild(tdURL)
 
+                // creer le bouton editer 
                 const tdBoutons = document.createElement("td")
                 const btnEditer = document.createElement("button")
                 btnEditer.innerHTML = "Éditer"
                 btnEditer.setAttribute("class", `btnEditer`)
-                btnEditer.setAttribute("id", `btnEditer-${Identifiant}`)
+                btnEditer.setAttribute("id", `btnEditer-${identifiant}`)
                 tr.appendChild(tdBoutons)
                 tdBoutons.appendChild(btnEditer)
                 
@@ -138,27 +142,31 @@ function load() {
 
             console.log(tableau)
 
+            // event listener pour pouvoir editer le tableau
             tableau.addEventListener("click", (e) => {
 
                 let classe = e.target.className
 
                 if (classe === "btnEditer") {
                     
-                    let td = (e.target.parentElement)
-                    console.log(td)
+                    //aller chercher le id de la rangee
+                    let td = e.target.parentElement
+                    // console.log(td)
                     let tr = td.parentNode
-                    console.log(tr)
+                    // console.log(tr)
                     let ligne = tr.id
 
-                    // let img = document.getElementById("img-" + ligne).innerHTML
+                    // aller chercher les elements par leurs ID 
                     let identifiant = document.getElementById("identifiant-" + ligne)
                     let nom = document.getElementById("p-nom-" + ligne)
                     let quantite = document.getElementById("p-quantite-" + ligne)
                     let prix = document.getElementById("p-prix-" + ligne)
                     let description = document.getElementById("p-description-" + ligne)
                     let url = document.getElementById("p-url-" + ligne)
-                    // console.log(`${identifiant} \n${nom} \n${quantite} \n${prix} \n${description} \n${url}`)
 
+                    /*remplacer le contenue de la table une entree text*/
+                    
+                    // nom
                     const inputNom = document.createElement("input")
                     inputNom.setAttribute("class", "inputNom")
                     inputNom.type = "text"
@@ -166,6 +174,7 @@ function load() {
                     inputNom.value = nom.innerHTML
                     nom.parentNode.replaceChild(inputNom, nom)
 
+                    // quantite
                     const inputQuantite = document.createElement("input")
                     inputQuantite.setAttribute("class", "inputQuantite")
                     inputQuantite.type = "number"
@@ -173,6 +182,7 @@ function load() {
                     inputQuantite.value = quantite.innerHTML
                     quantite.parentNode.replaceChild(inputQuantite, quantite)
 
+                    // prix
                     const inputPrix = document.createElement("input")
                     inputPrix.setAttribute("class", "inputPrix")
                     inputPrix.type = "number"
@@ -180,21 +190,27 @@ function load() {
                     inputPrix.value = prix.innerHTML
                     prix.parentNode.replaceChild(inputPrix, prix)
 
+                    // description
                     const textAreaDescription = document.createElement("textarea")
                     textAreaDescription.innerHTML = description.innerHTML
                     description.parentNode.replaceChild(textAreaDescription, description)
 
+                    // url
                     const inputURL = document.createElement("input")
                     inputURL.setAttribute("class", "inputURL")
                     inputURL.type = "text"
                     inputURL.value = url.innerHTML
                     url.parentNode.replaceChild(inputURL, url)
 
+                    /*Creer les boutons*/
+                    
+                    // Bouton enregistrer
                     const boutonEnregistrer = document.createElement("button")
                     boutonEnregistrer.innerHTML = "Enregistrer"
                     boutonEnregistrer.setAttribute("class", "btnEnregistrer")
                     boutonEnregistrer.setAttribute("id", `btnEnregistrer-${identifiant}`)
 
+                    // Bouton Annuler
                     const boutonAnnuler = document.createElement("button")
                     boutonAnnuler.innerHTML = "Annuler"
                     boutonAnnuler.setAttribute("class", "btnAnnuler")
@@ -205,51 +221,63 @@ function load() {
                     td.appendChild(boutonEnregistrer)
                     td.appendChild(boutonAnnuler)
 
+                    // creation du bouton Editer pour pouvoir le reutiliser 
                     const boutonEditer = document.createElement("button")
                     boutonEditer.innerHTML = "Éditer"
                     boutonEditer.setAttribute("class", `btnEditer`)
                     boutonEditer.setAttribute("id", `btnEditer-${identifiant}`)
                     
                     // ----------------------------------------------------------------------------------------------------
-
+                    // event listener pour pouvoir annuler ou enregistrer
                     td.addEventListener("click", (e) => {
 
                         if (e.target.className === "btnAnnuler") {
 
+                            // remplacer le contenue de la rangee par l'ancien contenue
                             inputNom.parentNode.replaceChild(nom, inputNom)
                             inputQuantite.parentNode.replaceChild(quantite, inputQuantite)
                             inputPrix.parentNode.replaceChild(prix, inputPrix)
                             textAreaDescription.parentNode.replaceChild(description, textAreaDescription)
                             inputURL.parentNode.replaceChild(url, inputURL)
 
-                            td.removeChild(boutonAnnuler)
+                            
+                            // effacer les boutons
                             td.removeChild(boutonEnregistrer)
-
-                            td.appendChild(boutonEditer)
+                            
+                            // remplacer un bouton par un autre 
+                            td.replaceChild(boutonEditer, boutonAnnuler)
 
                         }
                         else if (e.target.className === "btnEnregistrer") {
+                            /*Modifierla table*/
 
-                            nom.innerHTML = inputNom.value
+                            // nom
+                            nom.innerHTML = inputNom.value  
                             inputNom.parentNode.replaceChild(nom, inputNom)
 
+                            // quantite
                             quantite.innerHTML = inputQuantite.value
                             inputQuantite.parentNode.replaceChild(quantite, inputQuantite)
-
+                            
+                            // prix
                             prix.innerHTML = inputPrix.value
                             inputPrix.parentNode.replaceChild(prix, inputPrix)
 
+                            // description
                             description.innerHTML = textAreaDescription.value
                             textAreaDescription.parentNode.replaceChild(description, textAreaDescription)
 
+                            // url
                             url.innerHTML = inputURL.value
                             inputURL.parentNode.replaceChild(url, inputURL)
 
-                            td.removeChild(boutonAnnuler)
+                            // effacer les boutons
                             td.removeChild(boutonEnregistrer)
+                            
+                            // remplacer un bouton par un autre 
+                            td.replaceChild(boutonEditer, boutonAnnuler)
 
-                            td.appendChild(boutonEditer)
-
+                            // modifier la base de donnee
                             fetch(`http://localhost:5000/modifier/${ligne}`, {
                                 headers: {"Content-Type":"application/x-www-form-urlencoded"},
                                 method: "PUT",

@@ -62,9 +62,9 @@ app.get("/produit/:id", async (req, rep) => {
 
 /*----------------------------------- BLOQUER COMPTE -----------------------------------*/
 
-app.post('/bloquerAdmin/:id', async (req, rep) =>{
+app.put('/bloquerAdmin/', async (req, rep) =>{
     try {
-        let bloquer = await requete.bloquerAdmin(parseInt(req.params.id))
+        let bloquer = await requete.bloquerAdmin(1)
         rep.status(200).json(bloquer)
     } catch (error) {
         rep.status(500).json({
